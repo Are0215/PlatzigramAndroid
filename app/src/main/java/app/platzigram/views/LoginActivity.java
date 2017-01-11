@@ -1,9 +1,12 @@
-package app.platzigram;
+package app.platzigram.views;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import app.platzigram.R;
+import app.platzigram.views.CreateAccountActivity;
 
 public class LoginActivity extends AppCompatActivity {
 

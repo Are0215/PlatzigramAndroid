@@ -1,8 +1,10 @@
-package app.platzigram;
+package app.platzigram.views;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+
+import app.platzigram.R;
 
 public class CreateAccountActivity extends AppCompatActivity {
 
