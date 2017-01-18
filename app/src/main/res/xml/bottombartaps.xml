@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<taps>
+    <tap id="@+id/search"
+        title="Buscar"
+        barColorWhenSelected="@color/colorPrimary"
+        icon="@drawable/ic_search"
+        />
+    <tap id="@+id/home"
+        title="Home"
+        barColorWhenSelected="@color/colorPrimary"
+        icon="@drawable/ic_home"
+
+        />
+    <tap id="@+id/profile"
+        title="Yo"
+        barColorWhenSelected="@color/colorPrimary"
+        icon="@drawable/ic_person"
+        />
+</taps>
