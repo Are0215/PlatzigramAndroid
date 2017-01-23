@@ -5,6 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="app.platzigram.views.ContainerActivity">
-    <include layout="@layout/bottom_bar"/>
+
+    <FrameLayout
+        android:id="@+id/container_fragments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/include" />
+
+
+    <include layout="@layout/bottom_bar"
+        android:id="@+id/include" />
 
 </RelativeLayout>
