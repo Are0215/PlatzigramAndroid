@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<com.aurelhubert.ahbottomnavigation.AHBottomNavigation xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/bottombar"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-    <com.roughike.bottombar.BottomBar
-        android:id="@+id/bottombar"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"
-        app:bb_activeTabColor="@android:color/white"
-        app:bb_inActiveTabColor="@android:color/white"
-        app:bb_tabXmlResource="@xml/bottombartaps"/>
+    android:layout_height="70dp"
+    android:layout_gravity="bottom|end">
 
 
-</RelativeLayout>
+</com.aurelhubert.ahbottomnavigation.AHBottomNavigation>

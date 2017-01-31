@@ -5,8 +5,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.roughike.bottombar.BottomBar;
-import com.roughike.bottombar.OnTabReselectListener;
+import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
+import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 
 import app.platzigram.R;
 import app.platzigram.views.fragments.HomeFragment;
@@ -19,33 +19,49 @@ public class ContainerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_container);
-        BottomBar bottomBar = (BottomBar) findViewById(R.id.bottombar);
-        bottomBar.setDefaultTab(R.id.home);
-        bottomBar.setOnTabReselectListener(new OnTabReselectListener() {
+        AHBottomNavigation bottomNavigation = (AHBottomNavigation) findViewById(R.id.bottombar);
+        AHBottomNavigationItem item1 = new AHBottomNavigationItem(R.string.search, R.drawable.ic_search, R.color.colorPrimary);
+        AHBottomNavigationItem item2 = new AHBottomNavigationItem(R.string.home, R.drawable.ic_home, R.color.colorPrimary);
+        AHBottomNavigationItem item3 = new AHBottomNavigationItem(R.string.profile, R.drawable.ic_person, R.color.colorPrimary);
+        bottomNavigation.addItem(item1);
+        bottomNavigation.addItem(item2);
+        bottomNavigation.addItem(item3);
+
+        bottomNavigation.setOnTabSelectedListener(new AHBottomNavigation.OnTabSelectedListener() {
             @Override
-            public void onTabReSelected(@IdRes int tabId) {
-                switch (tabId){
-                    case R.id.home:
+            public boolean onTabSelected(int position, boolean wasSelected) {
+                // Do something cool here...
+                switch (position) {
+                    case 1:
                         HomeFragment homeFragment = new HomeFragment();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container_fragments,homeFragment)
-                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-                        .addToBackStack(null).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container_fragments, homeFragment)
+                                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+                                .addToBackStack(null).commit();
 
                         break;
-                    case R.id.profile:
+                    case 2:
                         ProfileFragment profileFragment = new ProfileFragment();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container_fragments,profileFragment)
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container_fragments, profileFragment)
                                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
                                 .addToBackStack(null).commit();
                         break;
-                    case R.id.search:
+                    case 0:
                         SearchFragment search = new SearchFragment();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container_fragments,search)
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container_fragments, search)
                                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
                                 .addToBackStack(null).commit();
                         break;
                 }
+                return true;
             }
         });
+        bottomNavigation.setOnNavigationPositionListener(new AHBottomNavigation.OnNavigationPositionListener() {
+            @Override
+            public void onPositionChange(int y) {
+                // Manage the new y position
+            }
+        });
+
+
     }
 }
