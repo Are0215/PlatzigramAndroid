@@ -32,22 +32,22 @@ public class ContainerActivity extends AppCompatActivity {
             public boolean onTabSelected(int position, boolean wasSelected) {
                 // Do something cool here...
                 switch (position) {
+                    case 0:
+                        SearchFragment search = new SearchFragment();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container_fragments, search)
+                                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+                                .addToBackStack(null).commit();
+
+                        break;
                     case 1:
                         HomeFragment homeFragment = new HomeFragment();
                         getSupportFragmentManager().beginTransaction().replace(R.id.container_fragments, homeFragment)
                                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
                                 .addToBackStack(null).commit();
-
                         break;
                     case 2:
                         ProfileFragment profileFragment = new ProfileFragment();
                         getSupportFragmentManager().beginTransaction().replace(R.id.container_fragments, profileFragment)
-                                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-                                .addToBackStack(null).commit();
-                        break;
-                    case 0:
-                        SearchFragment search = new SearchFragment();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container_fragments, search)
                                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
                                 .addToBackStack(null).commit();
                         break;
