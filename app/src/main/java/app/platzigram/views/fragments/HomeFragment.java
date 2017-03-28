@@ -45,11 +45,11 @@ public class HomeFragment extends Fragment {
 
     public ArrayList<Picture> buildPictures(){
         ArrayList<Picture> arrayList = new ArrayList<>();
-        arrayList.add(new Picture("http://media.istockphoto.com/photos/selfie-picture-id491464500?k=6&m=491464500&s=170667a&w=0&h=uzt1s3PSLsi1jim9oTESOgm9x0vY95_WKQM4ydqz50s=","Arodridueze","4 días","4"));
-        arrayList.add(new Picture("http://media.istockphoto.com/photos/selfie-picture-id491464500?k=6&m=491464500&s=170667a&w=0&h=uzt1s3PSLsi1jim9oTESOgm9x0vY95_WKQM4ydqz50s=","Arodridueze","4 días","4"));
-        arrayList.add(new Picture("http://media.istockphoto.com/photos/selfie-picture-id491464500?k=6&m=491464500&s=170667a&w=0&h=uzt1s3PSLsi1jim9oTESOgm9x0vY95_WKQM4ydqz50s=","Arodridueze","4 días","4"));
-        arrayList.add(new Picture("http://media.istockphoto.com/photos/selfie-picture-id491464500?k=6&m=491464500&s=170667a&w=0&h=uzt1s3PSLsi1jim9oTESOgm9x0vY95_WKQM4ydqz50s=","Arodridueze","4 días","4"));
-        arrayList.add(new Picture("http://media.istockphoto.com/photos/selfie-picture-id491464500?k=6&m=491464500&s=170667a&w=0&h=uzt1s3PSLsi1jim9oTESOgm9x0vY95_WKQM4ydqz50s=","Arodridueze","4 días","4"));
+        arrayList.add(new Picture("http://media.istockphoto.com/photos/selfie-picture-id491464500?k=6&m=491464500&s=170667a&w=0&h=uzt1s3PSLsi1jim9oTESOgm9x0vY95_WKQM4ydqz50s=","Arodridueze","4 días","4 Me Gusta"));
+        arrayList.add(new Picture("http://media.istockphoto.com/photos/selfie-picture-id491464500?k=6&m=491464500&s=170667a&w=0&h=uzt1s3PSLsi1jim9oTESOgm9x0vY95_WKQM4ydqz50s=","Arodridueze","4 días","14 Me Gusta"));
+        arrayList.add(new Picture("http://media.istockphoto.com/photos/selfie-picture-id491464500?k=6&m=491464500&s=170667a&w=0&h=uzt1s3PSLsi1jim9oTESOgm9x0vY95_WKQM4ydqz50s=","Arodridueze","4 días","24 Me Gusta"));
+        arrayList.add(new Picture("http://media.istockphoto.com/photos/selfie-picture-id491464500?k=6&m=491464500&s=170667a&w=0&h=uzt1s3PSLsi1jim9oTESOgm9x0vY95_WKQM4ydqz50s=","Arodridueze","4 días","34 Me Gusta"));
+        arrayList.add(new Picture("http://media.istockphoto.com/photos/selfie-picture-id491464500?k=6&m=491464500&s=170667a&w=0&h=uzt1s3PSLsi1jim9oTESOgm9x0vY95_WKQM4ydqz50s=","Arodridueze","4 días","45 Me Gusta"));
         return arrayList;
     }
 
