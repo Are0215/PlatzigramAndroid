@@ -7,4 +7,8 @@
     <string name="search">Buscar</string>
     <string name="home">Inicio</string>
     <string name="profile">Perfile</string>
+    <string name="i_like">Me gusta</string>
+    <string name="titleimage_detail">\"Todos a la playa\"</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet enim a aliquam commodo. In et orci orci. Sed posuere porta nulla nec interdum. Donec volutpat ullamcorper nisl, quis eleifend diam pellentesque vitae. Mauris rhoncus felis pharetra, varius augue condimentum, semper massa. Curabitur pretium diam tortor, eget tristique lorem sagittis a. Donec ut placerat elit. Mauris nisl nisl, suscipit quis semper eget, lobortis non orci. Phasellus ut ullamcorper felis. Aenean ac turpis velit.</string>
+    <string name="transition_name_picture">transitionanmepicutre</string>
 </resources>

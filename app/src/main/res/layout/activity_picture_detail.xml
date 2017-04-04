@@ -25,7 +25,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/image"
+                android:contentDescription="@string/app_name"
                 android:scaleType="centerCrop"
+                android:transitionName="@string/transition_name_picture"
                 app:layout_collapseMode="parallax" />
 
 
@@ -33,7 +35,6 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
@@ -47,7 +48,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/username_detail"
@@ -67,11 +69,10 @@
                 android:paddingRight="@dimen/activity_horizontal_margin">
 
                 <TextView
-                    android:id="@+id/likeNUmerberDetail"
+                    android:id="@+id/like_number_detail"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:text=""
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:layout_height="wrap_content"
+                    android:text="10"
                     android:textSize="15sp" />
 
                 <TextView
@@ -80,13 +81,50 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="@dimen/activity_horizontal_margin"
                     android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="@string/i_like"
                     android:textSize="15sp" />
 
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grayDivider" />
+
+            <TextView
+                android:id="@+id/title_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="20dp"
+                android:text="@string/titleimage_detail"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_content_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:paddingTop="20dp"
+                android:text="@string/lorem"
+                android:textSize="16sp" />
         </LinearLayout>
 
 
     </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_anchor="@+id/appBar"
+        app:layout_anchorGravity="bottom|end"
+        app:srcCompat="@drawable/heart" />
 
 
 </android.support.design.widget.CoordinatorLayout>

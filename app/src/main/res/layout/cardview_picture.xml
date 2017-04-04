@@ -3,7 +3,8 @@
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
     android:id="@+id/picture_card"
     android:layout_width="match_parent"
-    android:layout_height="200dp" android:layout_margin="4dp"
+    android:layout_height="200dp"
+    android:layout_margin="4dp"
     cardview:cardCornerRadius="4dp">
 
     <FrameLayout
@@ -16,7 +17,8 @@
             android:layout_height="200dp"
             android:background="@drawable/image"
             android:contentDescription="@string/app_name"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            android:transitionName="@string/transition_name_picture" />
 
         <LinearLayout
             android:layout_width="match_parent"

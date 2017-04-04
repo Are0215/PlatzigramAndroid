@@ -1,7 +1,11 @@
 package app.platzigram.adapter;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.os.Build;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.RecyclerView;
+import android.transition.Explode;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,12 +18,13 @@ import java.util.ArrayList;
 
 import app.platzigram.R;
 import app.platzigram.model.Picture;
+import app.platzigram.views.PictureDetailActivity;
 
 /**
  * Created by arodriguez on 6/02/2017.
  */
 
-public class PictureAdapterRecycleView  extends RecyclerView.Adapter<PictureAdapterRecycleView.PictureViewHolder>{
+public class PictureAdapterRecycleView extends RecyclerView.Adapter<PictureAdapterRecycleView.PictureViewHolder> {
     private ArrayList<Picture> pictures;
     private int resource;
     private Activity activity;
@@ -32,7 +37,7 @@ public class PictureAdapterRecycleView  extends RecyclerView.Adapter<PictureAdap
 
     @Override
     public PictureViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(resource,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(resource, parent, false);
         return new PictureViewHolder(view);
     }
 
@@ -43,7 +48,24 @@ public class PictureAdapterRecycleView  extends RecyclerView.Adapter<PictureAdap
         holder.timeCard.setText(picture.getTime());
         holder.likeNumberCard.setText(picture.getLikeNumber());
         Picasso.with(activity).load(picture.getPicture()).into(holder.pictureCard);
-
+        holder.pictureCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(activity, PictureDetailActivity.class);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    Explode explode = new Explode();
+                    explode.setDuration(1000);
+                    activity.getWindow().setExitTransition(explode);
+                    activity.startActivity(i, ActivityOptionsCompat.makeSceneTransitionAnimation(
+                            activity,
+                            view,
+                            activity.getString(R.string.transition_name_picture)
+                    ).toBundle());
+                } else {
+                    activity.startActivity(i);
+                }
+            }
+        });
 
 
     }
